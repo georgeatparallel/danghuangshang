@@ -43,25 +43,25 @@ Hermes 会为远程工具加上服务器名前缀：
 
 | 工具名 | 用途 |
 |--------|------|
-| `mcp_parallel_search_web_search` | 搜索当前网页，返回来源 URL 和相关摘录 |
-| `mcp_parallel_search_web_fetch` | 从指定 URL 提取与任务相关的页面内容 |
+| `mcp__parallel_search__web_search` | 搜索当前网页，返回来源 URL 和相关摘录 |
+| `mcp__parallel_search__web_fetch` | 从指定 URL 提取与任务相关的页面内容 |
 
 在 Hermes 对话中试试：
 
 ```text
-请使用 mcp_parallel_search_web_search 查找 Hermes Agent 的 HTTP MCP 配置方法，
+请使用 mcp__parallel_search__web_search 查找 Hermes Agent 的 HTTP MCP 配置方法，
 优先使用官方文档。总结配置步骤，并给出来源链接。
 ```
 
 已有摘录足够时直接总结；需要核对原文或阅读指定页面时，再抓取：
 
 ```text
-请使用 mcp_parallel_search_web_fetch 阅读
+请使用 mcp__parallel_search__web_fetch 阅读
 https://docs.parallel.ai/integrations/mcp/search-mcp，
 总结匿名接入方式，并附上来源链接。
 ```
 
-检查回复中的工具调用记录：应出现对应的 `mcp_parallel_search_*` 工具和返回的来源内容。只看到模型回复不代表已调用搜索工具。
+检查回复中的工具调用记录：应出现对应的 `mcp__parallel_search__*` 工具和返回的来源内容。只看到模型回复不代表已调用搜索工具。
 
 ## 3. 排查与停用
 
@@ -74,4 +74,5 @@ https://docs.parallel.ai/integrations/mcp/search-mcp，
 
 - [Hermes MCP 配置与工具命名](https://hermes-agent.nousresearch.com/docs/user-guide/features/mcp)
 - [Hermes Agent v2026.9.24](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.24)
+- [该版本的 MCP 工具命名](https://github.com/NousResearch/hermes-agent/blob/f97608f178d1ffeca59860195ab7da295f7c8e5f/tools/mcp_tool_schema.py)
 - [Parallel Search MCP](https://docs.parallel.ai/integrations/mcp/search-mcp)
